@@ -46,20 +46,23 @@
     font-family: inherit;
     text-decoration: none;
     background-color: var(--Cyan);
-    padding: 0.5rem 2rem;
+    padding: 0.75rem 2rem;
     border-radius: 10rem;
     color: #fff;
     transition: all 0.2s ease-in-out;
 }
 
 .btn:hover {
-    opacity: 0.5;
-    color: #fff;
+    background-color: var(--Cyan-hover);
 }
 
 .container {
     width: 90%;
     margin-inline: auto;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 /* XS */
@@ -85,12 +88,63 @@
     .header__menu-button {
         display: none;
     }
+
+    .ad__section {
+        background: url("/images/bg-boost-desktop.svg");
+        background-repeat: no-repeat;
+        background-color: var(--Dark-Violet);
+        background-size: cover;
+        background-position: center;
+    }
 }
 
 /* LG */
 @media (min-width: 64rem) {
     .container {
         max-width: 64rem;
+    }
+
+    .hero__section {
+        margin-top: 4rem;
+    }
+    .hero__content {
+        flex-direction: row-reverse;
+        text-align: start;
+        gap: 0;
+    }
+
+    .hero__title {
+        font-size: var(--fs-5xl);
+        max-width: none;
+    }
+
+    .hero__illustration {
+        position: block;
+        right: 0;
+    }
+
+    .ad__title {
+        font-size: var(--fs-4xl);
+    }
+
+    .footer__content {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .footer__logo {
+        flex: 1;
+    }
+
+    .footer__links-wrapper {
+        flex: 2;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .stats__title {
+        font-size: var(--fs-4xl);
     }
 }
 
@@ -99,11 +153,23 @@
     .container {
         max-width: 80rem;
     }
+
+    .hero__title {
+        font-size: var(--fs-7xl);
+    }
+
+    .hero__description {
+        font-size: var(--fs-xl);
+    }
 }
 
 /* XXL */
 @media (min-width: 96rem) {
     .container {
         max-width: 96rem;
+    }
+
+    .hero__title {
+        font-size: var(--fs-80px);
     }
 }
