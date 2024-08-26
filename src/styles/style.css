@@ -106,7 +106,7 @@ a {
 }
 
 .hero__section {
-    margin-top: 2rem;
+    padding: 2rem 0;
 }
 
 .hero__content {
@@ -171,8 +171,7 @@ a {
 }
 
 .stats__content {
-    padding: 2rem 0;
-    font-size: var(--fs-base);
+    padding: 4rem 0;
 }
 
 .stats__text-container {
@@ -185,6 +184,13 @@ a {
     color: var(--Very-Dark-Violet);
 }
 
+.stats__description {
+    max-width: 45ch;
+    margin-inline: auto;
+    margin-top: 1rem;
+    margin-bottom: 6rem;
+}
+
 .stats__cards-container {
     display: flex;
     flex-direction: column;
@@ -193,6 +199,7 @@ a {
     margin-top: 4rem;
     text-align: center;
     position: relative;
+    font-size: var(--fs-base);
 }
 
 .stats__card {
@@ -241,11 +248,11 @@ a {
 .stats__card-title {
     font-size: var(--fs-2xl);
     font-weight: 700;
-    margin-top: 3rem;
+    margin-top: 2rem;
     color: var(--Very-Dark-Violet);
 }
 
 .stats__card-description {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     max-width: 27ch;
 }

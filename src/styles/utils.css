@@ -105,7 +105,7 @@
     }
 
     .hero__section {
-        margin-top: 4rem;
+        padding: 4rem 0;
     }
     .hero__content {
         flex-direction: row-reverse;
@@ -160,6 +160,47 @@
 
     .hero__description {
         font-size: var(--fs-xl);
+    }
+
+    .stats__cards-container {
+        flex-direction: row;
+        height: 24rem;
+        text-align: left;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .stats__card-description {
+        max-width: 30ch;
+    }
+
+    .stats__card {
+        padding: 3rem;
+    }
+
+    .stats__card::before {
+        left: 3rem;
+        transform: translateX(0);
+    }
+
+    .stats__cards-container::after {
+        height: 8px;
+        width: 70%;
+        left: 15%;
+        top: 43%;
+        transform: translateY(-50%);
+    }
+
+    .stats__card:nth-child(1) {
+        align-self: flex-start;
+    }
+
+    .stats__card:nth-child(2) {
+        align-self: center;
+    }
+
+    .stats__card:nth-child(3) {
+        align-self: flex-end;
     }
 }
 
