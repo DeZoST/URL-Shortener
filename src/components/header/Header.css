@@ -1,8 +1,9 @@
 .header {
-    margin-top: 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #fff;
+    padding: 1rem 0;
 }
 
 .navbar {
@@ -38,11 +39,7 @@
 .header__menu-button-icon {
     height: var(--size-3xl);
     width: var(--size-3xl);
-    color: var(--Gray);
-}
-
-.header__btn {
-    font-size: var(--fs-lg);
+    color: var(--Grayish-Violet);
 }
 
 /* MD */
@@ -56,5 +53,10 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
+        font-size: 15px;
+    }
+
+    .header__btn {
+        font-size: 15px;
     }
 }

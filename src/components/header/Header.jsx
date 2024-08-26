@@ -1,5 +1,5 @@
 import Button from "../button/Button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MobileMenu from "./mobile-menu/MobileMenu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -11,6 +11,14 @@ function Header() {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.classList.add("no-scroll");
+        } else {
+            document.body.classList.remove("no-scroll");
+        }
+    }, [isOpen]);
 
     return (
         <header className="header container">
@@ -43,7 +51,7 @@ function Header() {
                         <a href="#">Login</a>
                     </li>
                     <li className="navbar__links">
-                        <Button className={"header__btn"} text="Sign up" />
+                        <Button className={"header__btn"} text="Sign Up" />
                     </li>
                 </ul>
             </nav>

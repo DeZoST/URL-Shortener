@@ -1,4 +1,5 @@
-.mobile-menu {
+.mobile-menu,
+.wrapper {
     display: none;
 }
 
@@ -9,13 +10,14 @@
     margin-inline: auto;
     width: 80%;
     height: 1px;
-    background-color: var(--Gray);
+    background-color: var(--Grayish-Violet);
     z-index: 1;
 }
 
 .mobile-menu--open {
-    position: absolute;
-    top: 110px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -27,7 +29,6 @@
     padding: 2rem;
     color: #fff;
     font-weight: 700;
-    margin-inline: auto;
 }
 
 .mobile-menu__links {
