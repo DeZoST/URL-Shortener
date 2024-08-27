@@ -153,10 +153,10 @@ input {
     font-size: var(--fs-xl);
 }
 
-.input__container {
+.shorten__container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
     background: url("/images/bg-shorten-mobile.svg");
     background-repeat: no-repeat;
@@ -171,6 +171,15 @@ input {
 .input__btn {
     width: 100%;
     border-radius: 10px;
+}
+
+.input__error {
+    border: 2px solid var(--Red);
+}
+
+.error__message {
+    color: var(--Red);
+    font-size: var(--fs-sm);
 }
 
 .ad__section {

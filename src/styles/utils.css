@@ -153,7 +153,7 @@
         font-size: var(--fs-4xl);
     }
 
-    .input__container {
+    .shorten__container {
         flex-direction: row;
         padding: 3rem 2.5rem;
         background: url("/images/bg-shorten-desktop.svg");
@@ -163,8 +163,11 @@
     }
 
     .input__field {
+        padding: 0.75rem;
+    }
+
+    .input__container {
         flex: 6;
-        padding: 1rem;
     }
 
     .input__btn {
