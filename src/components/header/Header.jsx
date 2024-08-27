@@ -22,7 +22,7 @@ function Header() {
 
     return (
         <header className="header container">
-            <img src="/images/logo.svg" alt="Logo" />
+            <img src="images/logo.svg" alt="Logo" />
             <button
                 className="header__menu-button"
                 onClick={toggleMenu}
