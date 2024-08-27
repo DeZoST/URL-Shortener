@@ -40,7 +40,8 @@
   }
 } */
 
-.btn {
+.btn,
+.input__btn {
     font-weight: 700;
     cursor: pointer;
     font-family: inherit;
@@ -52,7 +53,12 @@
     transition: all 0.2s ease-in-out;
 }
 
-.btn:hover {
+.input__btn {
+    border-radius: 5px;
+}
+
+.btn:hover,
+.input__btn:hover {
     background-color: var(--Cyan-hover);
 }
 
@@ -145,6 +151,25 @@
 
     .stats__title {
         font-size: var(--fs-4xl);
+    }
+
+    .input__container {
+        flex-direction: row;
+        padding: 3rem 2.5rem;
+        background: url("/images/bg-shorten-desktop.svg");
+        background-repeat: no-repeat;
+        background-color: var(--Dark-Violet);
+        background-size: cover;
+    }
+
+    .input__field {
+        flex: 6;
+        padding: 1rem;
+    }
+
+    .input__btn {
+        flex: 1;
+        padding: 1rem;
     }
 }
 

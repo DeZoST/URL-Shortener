@@ -27,17 +27,17 @@ function App() {
                         <Button text="Get Started" className={"hero__btn"} />
                     </div>
                 </div>
-                {/*<div className="input__container">
-                    <input
-                        type="text"
-                        placeholder="Shorten a link here..."
-                        className="input__field"
-                    />
-                    <Button text="Shorten it !" />
-                </div>*/}
             </section>
             <section className="stats__section">
                 <div className="stats__content container">
+                    <div className="input__container">
+                        <input
+                            type="text"
+                            placeholder="Shorten a link here..."
+                            className="input__field"
+                        />
+                        <Button className={"input__btn"} text="Shorten it !" />
+                    </div>
                     <div className="stats__text-container">
                         <h2 className="stats__title">Advanced Statistics</h2>
                         <p className="stats__description">
