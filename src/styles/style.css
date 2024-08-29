@@ -168,6 +168,10 @@ input {
     top: -5rem;
 }
 
+.input__container {
+    width: 100%;
+}
+
 .input__btn {
     width: 100%;
     border-radius: 10px;

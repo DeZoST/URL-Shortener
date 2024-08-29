@@ -37,17 +37,21 @@ function App() {
 
         try {
             const response = await axios.post(
-                "https://cleanuri.com/api/v1/shorten",
-                `url=${encodeURIComponent(url)}`,
+                "https://api.tinyurl.com/create",
+                {
+                    url: url,
+                },
                 {
                     headers: {
-                        "Content-Type": "application/x-www-form-urlencoded",
+                        Authorization:
+                            "Bearer LPK9uKsfoabyC0oJFkl7CmfvPEkhQbRauHIeSd0d2QDM44HtqBIceXnqlQsk",
+                        "Content-Type": "application/json",
                     },
                 }
             );
             const newLink = {
                 original: url,
-                shortened: response.data.result_url,
+                shortened: response.data.data.tiny_url,
             };
 
             const updatedLinks = [newLink, ...shortenedLinks.slice(0, 2)];
@@ -86,7 +90,7 @@ function App() {
             <section className="hero__section container">
                 <div className="hero__content">
                     <img
-                        src="images/illustration-working.svg"
+                        src="/images/illustration-working.svg"
                         alt="Illustration of someone working on a computer"
                         className="hero__illustration"
                     />
