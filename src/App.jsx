@@ -24,7 +24,8 @@ function App() {
         return /^(ftp|http|https):\/\/[^ "]+$/.test(url);
     };
 
-    const handleShorten = async () => {
+    const handleShorten = async (e) => {
+        e.preventDefault();
         if (!url) {
             setError("URL cannot be empty.");
             return;
@@ -109,7 +110,11 @@ function App() {
             <section className="stats__section">
                 <div className="stats__content container">
                     <div className="shorten__container">
-                        <div className="input__container">
+                        <form
+                            className="input__container"
+                            onSubmit={handleShorten}
+                            action="#"
+                        >
                             <input
                                 type="text"
                                 placeholder="Shorten a link here..."
@@ -120,7 +125,7 @@ function App() {
                                 onChange={(e) => setUrl(e.target.value)}
                             />
                             {error && <p className="error__message">{error}</p>}
-                        </div>
+                        </form>
                         <Button
                             className={"input__btn"}
                             text="Shorten it!"
@@ -128,28 +133,30 @@ function App() {
                         />
                     </div>
 
-                    <div className="shortened-links-container">
+                    <div className="shortened-links__container">
                         {shortenedLinks.map((link, index) => (
                             <div key={index} className="shortened-links__card">
-                                <p className="shortened-link__card-description">
+                                <p className="shortened-link__original">
                                     {link.original}
                                 </p>
-                                <p className="shortened-link__card-description">
-                                    <a
-                                        href={link.shortened}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        {link.shortened}
-                                    </a>
-                                </p>
-                                <button
-                                    onClick={() =>
-                                        handleCopy(link.shortened, index)
-                                    }
-                                >
-                                    {link.copied ? "Copied" : "Copy"}
-                                </button>
+                                <div className="shortened-link__container">
+                                    <p className="shortened__link">
+                                        <a
+                                            href={link.shortened}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {link.shortened}
+                                        </a>
+                                    </p>
+                                    <Button
+                                        className={"shortened-link__btn"}
+                                        text={link.copied ? "Copied" : "Copy"}
+                                        onClick={() =>
+                                            handleCopy(link.shortened, index)
+                                        }
+                                    ></Button>
+                                </div>
                             </div>
                         ))}
                     </div>

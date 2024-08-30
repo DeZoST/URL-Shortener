@@ -53,7 +53,8 @@
     transition: all 0.2s ease-in-out;
 }
 
-.input__btn {
+.input__btn,
+.shortened-link__btn {
     border-radius: 5px;
 }
 
@@ -173,6 +174,26 @@
     .input__btn {
         flex: 1;
         padding: 1rem;
+    }
+
+    .shortened-link__container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .shortened__link {
+        line-height: 0;
+    }
+
+    .shortened-links__card {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .shortened-link__container::before {
+        display: none;
     }
 }
 
