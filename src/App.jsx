@@ -91,7 +91,7 @@ function App() {
             <section className="hero__section container">
                 <div className="hero__content">
                     <img
-                        src="/images/illustration-working.svg"
+                        src="images/illustration-working.svg"
                         alt="Illustration of someone working on a computer"
                         className="hero__illustration"
                     />
